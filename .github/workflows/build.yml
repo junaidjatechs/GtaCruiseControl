@@ -20,7 +20,7 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore Script Hook Dependencies
-      run: nuget restore GtaCruiseControl.csproj
+      run: nuget restore CruiseControlMod.csproj
 
     - name: Compile Mod DLL
       run: msbuild CruiseControlMod.csproj /p:Configuration=Release /p:Platform="Any CPU"
