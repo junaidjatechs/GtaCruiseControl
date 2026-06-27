@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyTitle>GtaCruiseControl</AssemblyTitle>
+    <Product>GTA5 Cruise Control Mod</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- We instruct Nuget to pull the necessary SHVDN references automatically -->
+    <PackageReference Include="ScriptHookVDotNet3" Version="3.6.0" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+</Project>
