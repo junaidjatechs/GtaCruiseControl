@@ -3,7 +3,7 @@
     <TargetFramework>net48</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <AssemblyTitle>GtaCruiseControl</AssemblyTitle>
+    <AssemblyTitle>CruiseControlMod</AssemblyTitle>
     <Product>GTA5 Cruise Control Mod</Product>
   </PropertyGroup>
 
