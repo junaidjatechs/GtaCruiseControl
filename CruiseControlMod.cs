@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using GTA;
 using GTA.Native;
-
+using GTA.UI; // Essential reference for TextElement compilation
 
 public class CruiseControlMod : Script
 {
