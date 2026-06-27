@@ -4,8 +4,6 @@ using System.Windows.Forms;
 using GTA;
 using GTA.Native;
 
-// Fix for GitHub Compiler: Map the legacy TextElement type name to SHVDN v3's UI Text class
-using TextElement = GTA.UI.Text;
 
 public class CruiseControlMod : Script
 {
