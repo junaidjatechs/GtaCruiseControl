@@ -1,0 +1,32 @@
+name: Build GTA 5 Mod
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to trigger the build manually
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild Engine
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet Packages
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore Script Hook Dependencies
+      run: nuget restore GtaCruiseControl.csproj
+
+    - name: Compile Mod DLL
+      run: msbuild CruiseControlMod.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Save Compiled Mod as Downloadable File
+      uses: actions/upload-artifact@v4
+      with:
+        name: Compiled-CruiseControl-Mod
+        path: bin/Release/net48/CruiseControlMod.dll
